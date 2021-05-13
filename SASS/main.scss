@@ -1,0 +1,146 @@
+@import 'config';
+
+@mixin flexContentColumn {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+}
+@mixin textConfig {
+    font-size: 1em;
+    color: $secondary-color;
+}
+
+#container{
+    @include flexContentColumn;
+    background: $terciary-color;
+}
+
+@import 'header';
+@import 'main';
+
+#main-subtitle{
+    margin: 30px;
+}
+
+@media (min-width: 960px) {
+    #header{
+       .logo-img{
+            width: 40vw;
+            .img-header{
+                margin-left: 3vw;
+            }
+        }  
+        nav{
+            width: 60vw;
+        }
+    } 
+    main{
+        section{   
+            width: 65vw;
+            #video{
+                width: 65vw;
+                height: 480px;
+            } 
+        }
+        #products{
+            grid-template-columns: repeat(3, auto);
+            width: 80vw;
+            .container-product{
+                .img-product{
+                    width: 25vw;
+                }
+            }
+        }
+    }  
+}
+
+@media (max-width: 960px) {
+    #header{
+            .logo-img{
+                width: 35vw;
+                .img-header{
+                    margin-left: 3vw;
+                }
+            }
+        nav{
+            font-size: 0.85em;
+            width: 65vw;
+        }
+    }
+    main{
+        section{   
+            width: 80vw;
+            #video{
+                width: 70vw;
+                height: 360px;
+            } 
+        }
+        #features{
+            width: 70vw;
+            .feature{
+                margin-left: 5vw;
+                font-size: 1em;
+            }
+        }
+        #products{
+            grid-template-columns: repeat(2, auto);
+            width: 80vw;
+            .container-product{
+                .img-product{
+                    width: 32.5vw;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:600px) {
+    #header{
+        flex-direction: column;
+        align-items: center;
+        .logo-img{
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+            padding: 5px 0px;
+        }
+        nav{
+            padding: 5px 0px;
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+            font-size: 1em;
+        }
+    }
+    main{
+        section{   
+            width: 90vw;
+            #main-subtitle{
+                font-size: 1.4em;
+            }
+            #video{
+                width: 80vw;
+                height: 244px;
+            } 
+        }
+        #features{
+            width: 75vw;
+            margin-left: 5vw;
+            .feature{
+                font-size: 1em;
+            }
+        }
+        #products{
+            grid-template-columns: auto;
+            width: 90vw;
+            .container-product{
+                .img-product{
+                    width: 75vw;
+                }
+            }
+        }
+    }
+    
+}
+    
+

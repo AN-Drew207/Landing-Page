@@ -1,0 +1,38 @@
+#header{
+    @include textConfig;
+    align-items: center;
+    background: $primary-color;
+    display: flex;
+    flex-direction: row;
+    padding: 10px 0px;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: auto;
+    .logo-img{
+        display: flex;
+        .img-header{
+            display: inline-block;
+            width: 250px;
+            height: 70px;
+        }
+    }
+            
+    nav{
+        
+        display: flex;
+        justify-content: right;
+        ul{
+        display: flex;
+           li{
+               display: inline-block;
+               padding: 0px 2.5vw;
+               .nav-link{
+                    list-style: none;
+                    text-decoration: none;
+                    @include textConfig;
+                }
+            }
+        }
+    }
+}

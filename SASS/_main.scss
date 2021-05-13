@@ -1,0 +1,72 @@
+main{
+    @include flexContentColumn;
+    @include textConfig;
+    align-items: center;
+    justify-content: center;
+    
+    section{   
+        @include flexContentColumn;
+        justify-content: center;
+        align-items: center;
+        margin: 5vh;
+        width: 50vw;
+        form{
+            @include flexContentColumn;
+            align-items: center;
+            input[type='submit']{
+                font-weight: bold;
+                display: inline-block;
+                margin: 15px;
+                width: auto;
+            }
+            input[type='email']{
+                display: inline-block;
+                width: 300px;
+            }
+        }
+        
+        #video{
+            width: 50vw;
+            height: 480px;
+        } 
+    }
+    #features{
+        align-items: initial;
+        text-align: left;
+        .feature{
+            margin: 25px 0px;
+        }
+    }
+    button, input[type='submit']{
+        font-size: 1.2em;
+        width: auto;
+        height: auto;
+        margin: 5px;
+        padding: 5px;
+        background: $secondary-color;
+        border-radius: 0px;
+        border: 2px solid #000;
+    }
+    
+    #products{
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        grid-gap: 20px;
+        .container-product{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid #fff;
+            .img-product{
+                display: flex;
+                height: auto;
+                margin: 15px 5px;
+            }
+            h3{
+                margin: 10px 0px;
+            }
+        }
+    }
+}
